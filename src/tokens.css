@@ -1,0 +1,79 @@
+/*
+ * sonnyhuynh.dev tokens. Source of truth: https://claude.ai/artifact/UPMtNR95M2YJQ8PCsRdHaE (tokens.json).
+ * Plain CSS custom properties: usable with or without Tailwind.
+ */
+
+/* Uncomment once the woff2 files are in ../fonts (see fonts/README.md).
+@font-face {
+  font-family: "DejaVu Sans Mono";
+  src: url("../fonts/DejaVuSansMono.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f7f8f4;
+  --surface: #ffffff;
+  --ink: #2c332b;
+  --ink-muted: #5f665d;
+  --line: #e2e6dc;
+  --line-strong: #848d82;
+  --sage: #c3d5b8;
+  --pistachio: #dfe3c8;
+  --eucalyptus: #b9d1c8;
+  --accent: #4a6845;
+  --accent-strong: #3a5436;
+  --accent-subtle: #ecf0e6;
+  --on-accent: #2c332b;
+  --danger: #b42318;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1c201c;
+  --surface: #242924;
+  --ink: #e7ebe3;
+  --ink-muted: #a4aca1;
+  --line: #303630;
+  --line-strong: #6b7369;
+  --sage: #b3c8a8;
+  --pistachio: #d3d8b8;
+  --eucalyptus: #a9c4ba;
+  --accent: #c3d5b8;
+  --accent-strong: #dbe6d2;
+  --accent-subtle: #2c352a;
+  --on-accent: #2c332b;
+  --danger: #f4978a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #1c201c;
+    --surface: #242924;
+    --ink: #e7ebe3;
+    --ink-muted: #a4aca1;
+    --line: #303630;
+    --line-strong: #6b7369;
+    --sage: #b3c8a8;
+    --pistachio: #d3d8b8;
+    --eucalyptus: #a9c4ba;
+    --accent: #c3d5b8;
+    --accent-strong: #dbe6d2;
+    --accent-subtle: #2c352a;
+    --on-accent: #2c332b;
+    --danger: #f4978a;
+  }
+}
+
+/* Per-app layer: photos stays neutral so the UI never competes with the pictures. */
+[data-app="photos"] {
+  --accent: var(--ink);
+  --accent-strong: var(--ink-muted);
+  --sage: var(--surface);
+  --on-accent: var(--ink);
+}

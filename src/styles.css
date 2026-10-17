@@ -1,0 +1,74 @@
+/*
+ * Entry for Tailwind v4 apps. In the app's CSS:
+ *   @import "tailwindcss";
+ *   @import "@sonnyhuynh/ui/styles.css";
+ */
+@import "@fontsource-variable/inter";
+@import "./tokens.css";
+
+/* Let the app's Tailwind build see the classes used by the components. */
+@source "./components";
+
+/*
+ * Theme: only the system's values exist as utilities. The default palette and
+ * type scale are cleared so off-system colors and sizes fail loudly.
+ * Spacing keeps Tailwind's 4px base, so p-1/2/4/8/16 = space-1/2/4/8/16.
+ */
+@theme {
+  --color-*: initial;
+  --text-*: initial;
+
+  --font-sans: "Inter Variable", Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "DejaVu Sans Mono", Menlo, Monaco, ui-monospace, monospace;
+  --font-serif: Newsreader, Georgia, serif;
+
+  --text-display: 40px;
+  --text-display--line-height: 44px;
+  --text-display--letter-spacing: -0.02em;
+  --text-heading: 22px;
+  --text-heading--line-height: 28px;
+  --text-heading--letter-spacing: -0.01em;
+  --text-meta: 12px;
+  --text-meta--line-height: 18px;
+  --text-title: 17px;
+  --text-title--line-height: 24px;
+  --text-title--font-weight: 500;
+  --text-body: 16px;
+  --text-body--line-height: 26px;
+  --text-small: 14px;
+  --text-small--line-height: 22px;
+  --text-essay: 36px;
+  --text-essay--line-height: 40px;
+
+  --radius-sm: 4px;
+  --radius-full: 9999px;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-sage: var(--sage);
+  --color-pistachio: var(--pistachio);
+  --color-eucalyptus: var(--eucalyptus);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-subtle: var(--accent-subtle);
+  --color-on-accent: var(--on-accent);
+  --color-danger: var(--danger);
+}
+
+@layer base {
+  html {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    margin: 0;
+  }
+}
