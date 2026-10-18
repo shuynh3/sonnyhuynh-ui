@@ -12,15 +12,32 @@ export interface CardProps extends Omit<HTMLAttributes<HTMLElement>, 'title'> {
   footer?: ReactNode;
   /** Makes the whole card a link (through the title). */
   href?: string;
+  /**
+   * Fill layer. 'muted' (default) for cards inside a surface panel; 'raised' for cards
+   * sitting directly on the page. Never the same layer as the parent.
+   */
+  layer?: 'muted' | 'raised';
 }
 
-export function Card({ title, meta, media, mediaAlt = '', footer, href, className, children, ...props }: CardProps) {
+export function Card({
+  title,
+  meta,
+  media,
+  mediaAlt = '',
+  footer,
+  href,
+  layer = 'muted',
+  className,
+  children,
+  ...props
+}: CardProps) {
   return (
     <article
       {...props}
       className={cx(
-        'relative flex flex-col border border-line bg-surface transition-colors',
-        href && 'hover:border-line-strong',
+        'relative flex flex-col transition-colors',
+        layer === 'raised' ? 'bg-surface' : 'bg-surface-muted',
+        href && 'hover:bg-accent-subtle',
         className,
       )}
     >

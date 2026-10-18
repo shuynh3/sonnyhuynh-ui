@@ -49,7 +49,7 @@ export function SiteNav({
 
   return (
     <nav aria-label="Site" {...props} className={cx('font-mono text-meta text-ink', className)}>
-      <div className="flex items-center justify-between gap-4 border-b border-line bg-surface px-4 py-2 sm:px-8">
+      <div className="flex items-center justify-between gap-4 bg-surface px-4 py-2 sm:px-8">
         <div className="flex min-w-0 items-center gap-2">
           <a href={brandHref} className={cx('whitespace-nowrap text-ink no-underline rounded-sm', focusRing)}>
             {brand}
@@ -74,7 +74,7 @@ export function SiteNav({
               <DropdownMenu.Content
                 align="start"
                 sideOffset={4}
-                className="z-50 min-w-[200px] border border-line bg-surface py-1 font-mono text-meta"
+                className="z-50 min-w-[200px] border border-line-strong bg-surface pt-1 font-mono text-meta"
               >
                 {apps.map((a) => {
                   const active = a.id === current;
@@ -91,9 +91,8 @@ export function SiteNav({
                     </DropdownMenu.Item>
                   );
                 })}
-                <DropdownMenu.Separator className="my-1 h-px bg-line" />
                 <DropdownMenu.Item asChild>
-                  <a href={brandHref} className={cx(itemCls, 'text-ink-muted')}>
+                  <a href={brandHref} className={cx(itemCls, 'mt-1 bg-surface-muted text-ink-muted')}>
                     sonnyhuynh.dev home
                   </a>
                 </DropdownMenu.Item>
@@ -107,7 +106,7 @@ export function SiteNav({
       {sections && sections.length > 0 && (
         <ul
           aria-label="Sections"
-          className="m-0 flex list-none gap-4 overflow-x-auto border-b border-line bg-bg px-4 py-0 [scrollbar-width:none] sm:gap-8 sm:px-8"
+          className="m-0 flex list-none gap-4 overflow-x-auto bg-surface-muted px-4 py-0 [scrollbar-width:none] sm:gap-8 sm:px-8"
         >
           {sections.map((s) => {
             const active = s.id === currentSection;

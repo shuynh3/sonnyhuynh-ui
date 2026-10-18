@@ -18,6 +18,7 @@
   color-scheme: light;
   --bg: #f7f8f4;
   --surface: #ffffff;
+  --surface-muted: #edf0e8;
   --ink: #2c332b;
   --ink-muted: #5f665d;
   --line: #e2e6dc;
@@ -36,6 +37,7 @@
   color-scheme: dark;
   --bg: #1c201c;
   --surface: #242924;
+  --surface-muted: #161916;
   --ink: #e7ebe3;
   --ink-muted: #a4aca1;
   --line: #303630;
@@ -55,6 +57,7 @@
     color-scheme: dark;
     --bg: #1c201c;
     --surface: #242924;
+    --surface-muted: #161916;
     --ink: #e7ebe3;
     --ink-muted: #a4aca1;
     --line: #303630;
