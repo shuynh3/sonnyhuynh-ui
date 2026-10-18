@@ -9,3 +9,7 @@ export type { TagProps } from './components/Tag';
 export { Card } from './components/Card';
 export type { CardProps } from './components/Card';
 export { cx } from './cx';
+export { ThemeToggle } from './components/ThemeToggle';
+export type { ThemeToggleProps } from './components/ThemeToggle';
+export { currentTheme, readTheme, setTheme, themeScript } from './theme';
+export type { Theme } from './theme';

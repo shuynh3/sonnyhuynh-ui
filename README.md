@@ -23,7 +23,19 @@ import { SiteNav, Button, Link, Tag, Card } from '@sonnyhuynh/ui'
 
 When linked locally, the app's Vite config needs `resolve.dedupe: ['react', 'react-dom']` and `server.fs.allow` including this folder (see sonnyhuynh-resume's `vite.config.ts`).
 
-Set `data-theme="light" | "dark"` on `<html>` to force a theme (otherwise it follows the OS), and `data-app="photos"` for the neutral photos accent.
+## Theme
+
+Light is the default, regardless of the device setting. `ThemeToggle` switches theme and saves the choice in a `theme` cookie on `.sonnyhuynh.dev` (a cookie rather than localStorage, so it carries across subdomains). Put the toggle in the nav and inline `themeScript` at the top of `<head>` so a saved theme applies before first paint:
+
+```tsx
+<SiteNav current="resume"><ThemeToggle /></SiteNav>
+```
+
+```html
+<script>(function(){var m=document.cookie.match(/(?:^|; )theme=(light|dark)/);if(m)document.documentElement.setAttribute('data-theme',m[1]);})();</script>
+```
+
+In dark mode the three greens become deep fills with light `on-accent` text (same hues, not pastels). Set `data-app="photos"` on `<html>` for the neutral photos accent.
 
 ## Fonts
 

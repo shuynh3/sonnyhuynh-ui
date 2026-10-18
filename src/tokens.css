@@ -1,6 +1,7 @@
 /*
  * sonnyhuynh.dev tokens. Source of truth: https://claude.ai/artifact/UPMtNR95M2YJQ8PCsRdHaE (tokens.json).
  * Plain CSS custom properties: usable with or without Tailwind.
+ * Light is the default; dark applies only with data-theme="dark" on <html> (set by ThemeToggle).
  */
 
 /* Uncomment once the woff2 files are in ../fonts (see fonts/README.md).
@@ -50,27 +51,6 @@
   --accent-subtle: #2c352a;
   --on-accent: #e7ebe3;
   --danger: #f4978a;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --bg: #1c201c;
-    --surface: #242924;
-    --surface-muted: #161916;
-    --ink: #e7ebe3;
-    --ink-muted: #a4aca1;
-    --line: #303630;
-    --line-strong: #6b7369;
-    --sage: #3b4a36;
-    --pistachio: #45482f;
-    --eucalyptus: #34473f;
-    --accent: #c3d5b8;
-    --accent-strong: #dbe6d2;
-    --accent-subtle: #2c352a;
-    --on-accent: #e7ebe3;
-    --danger: #f4978a;
-  }
 }
 
 /* Per-app layer: photos stays neutral so the UI never competes with the pictures. */
