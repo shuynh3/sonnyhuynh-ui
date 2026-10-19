@@ -48,7 +48,7 @@ export function SiteNav({
   const currentApp = apps.find((a) => a.id === current);
 
   return (
-    <nav aria-label="Site" {...props} className={cx('font-mono text-meta text-ink', className)}>
+    <nav aria-label="Site" {...props} className={cx('sticky top-0 z-40 font-mono text-meta text-ink', className)}>
       <div className="flex items-center justify-between gap-4 bg-surface px-4 py-2 sm:px-8">
         <div className="flex min-w-0 items-center gap-2">
           <a href={brandHref} className={cx('whitespace-nowrap text-ink no-underline rounded-sm', focusRing)}>

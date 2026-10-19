@@ -68,6 +68,8 @@
     color: var(--ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    /* Keep in-page anchors clear of the sticky SiteNav. */
+    scroll-padding-top: 4rem;
   }
   body {
     margin: 0;
