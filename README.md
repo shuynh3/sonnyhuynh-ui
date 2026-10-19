@@ -28,7 +28,7 @@ When linked locally, the app's Vite config needs `resolve.dedupe: ['react', 'rea
 Light is the default, regardless of the device setting. `ThemeToggle` switches theme and saves the choice in a `theme` cookie on `.sonnyhuynh.dev` (a cookie rather than localStorage, so it carries across subdomains). Put the toggle in the nav and inline `themeScript` at the top of `<head>` so a saved theme applies before first paint:
 
 ```tsx
-<SiteNav current="resume"><ThemeToggle /></SiteNav>
+<SiteNav current="about"><ThemeToggle /></SiteNav>
 ```
 
 ```html

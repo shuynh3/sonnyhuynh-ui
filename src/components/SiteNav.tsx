@@ -11,7 +11,7 @@ export interface SiteNavItem {
 export interface SiteNavProps extends HTMLAttributes<HTMLElement> {
   /** id of the app the page belongs to. Shown in the switcher button. */
   current?: string;
-  /** Apps listed in the switcher menu. Default: resume, photos, projects. */
+  /** Apps listed in the switcher menu. Default: about, photos, projects. */
   apps?: SiteNavItem[];
   /** This app's own pages. Omit for single-page apps: the second row is not rendered. */
   sections?: SiteNavItem[];
@@ -25,7 +25,7 @@ export interface SiteNavProps extends HTMLAttributes<HTMLElement> {
 }
 
 export const DEFAULT_APPS: SiteNavItem[] = [
-  { id: 'resume', label: 'resume', href: 'https://resume.sonnyhuynh.dev' },
+  { id: 'about', label: 'about', href: 'https://about.sonnyhuynh.dev' },
   { id: 'photos', label: 'photos', href: 'https://photos.sonnyhuynh.dev' },
   { id: 'projects', label: 'projects', href: 'https://sonnyhuynh.dev/projects' },
 ];
